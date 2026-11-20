@@ -1,0 +1,228 @@
+/* School Portal - blue and white theme.
+   @ASSETS@ is replaced with the absolute assets path when the app starts. */
+
+* {
+    font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+QStackedWidget, QWidget#RolePage, QWidget#LoginPage, QWidget#SignupPage {
+    background: #F3F7FE;
+}
+
+/* ---------- Panel and branding ---------- */
+QFrame#panel {
+    background: #FFFFFF;
+    border: 1px solid #DCE6F7;
+    border-radius: 20px;
+}
+QLabel#logoMark {
+    background: #1F5FD1;
+    border-radius: 12px;
+}
+QLabel#miniLogo {
+    background: #1F5FD1;
+    border-radius: 8px;
+}
+QLabel#brandLabel {
+    color: #0F1F3D;
+    font-size: 17px;
+    font-weight: 600;
+}
+QLabel#miniBrand {
+    color: #0F1F3D;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ---------- Text ---------- */
+QLabel#headingLabel {
+    color: #0F1F3D;
+    font-size: 26px;
+    font-weight: 700;
+}
+QLabel#subheadingLabel {
+    color: #5B6B8C;
+    font-size: 14px;
+}
+QLabel[field="true"] {
+    color: #33425F;
+    font-size: 13px;
+    font-weight: 600;
+}
+QLabel#helpLabel, QLabel#footerLabel {
+    color: #7A89A8;
+    font-size: 13px;
+}
+QLabel#hintLabel {
+    color: #7A89A8;
+    font-size: 12px;
+}
+
+/* ---------- Messages ---------- */
+QLabel#messageLabel {
+    font-size: 13px;
+    border-radius: 8px;
+    padding: 9px 12px;
+}
+QLabel#messageLabel[state="error"] {
+    background: #FDECEC;
+    color: #B3261E;
+}
+QLabel#messageLabel[state="success"] {
+    background: #E8F5EC;
+    color: #1B6B3A;
+}
+
+/* ---------- Inputs ---------- */
+QLineEdit, QComboBox {
+    background: #FFFFFF;
+    color: #0F1F3D;
+    border: 2px solid #E3EBF8;
+    border-radius: 10px;
+    padding: 9px 12px;
+    font-size: 14px;
+    min-height: 22px;
+    selection-background-color: #BFD4F6;
+    selection-color: #0F1F3D;
+}
+QLineEdit:hover, QComboBox:hover {
+    border-color: #C7D6F0;
+}
+QLineEdit:focus, QComboBox:focus, QComboBox:on {
+    border-color: #1F5FD1;
+}
+QComboBox::drop-down {
+    border: none;
+    width: 30px;
+}
+QComboBox::down-arrow {
+    image: url(@ASSETS@/chevron.svg);
+    width: 12px;
+    height: 12px;
+}
+QComboBox QAbstractItemView {
+    background: #FFFFFF;
+    color: #0F1F3D;
+    border: 1px solid #DCE6F7;
+    selection-background-color: #EAF1FD;
+    selection-color: #0F1F3D;
+    outline: 0;
+}
+
+QCheckBox {
+    color: #5B6B8C;
+    font-size: 13px;
+    spacing: 8px;
+}
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #B8C7E3;
+    border-radius: 5px;
+    background: #FFFFFF;
+}
+QCheckBox::indicator:hover {
+    border-color: #1F5FD1;
+}
+QCheckBox::indicator:checked {
+    background: #1F5FD1;
+    border-color: #1F5FD1;
+    image: url(@ASSETS@/check.svg);
+}
+
+/* ---------- Buttons ---------- */
+QPushButton#continueButton, QPushButton#signInButton, QPushButton#createButton {
+    background: #1F5FD1;
+    color: #FFFFFF;
+    border: 2px solid #1F5FD1;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+}
+QPushButton#continueButton:hover, QPushButton#signInButton:hover, QPushButton#createButton:hover {
+    background: #174DB0;
+    border-color: #174DB0;
+}
+QPushButton#continueButton:pressed, QPushButton#signInButton:pressed, QPushButton#createButton:pressed {
+    background: #0F3A8A;
+    border-color: #0F3A8A;
+}
+QPushButton#continueButton:focus, QPushButton#signInButton:focus, QPushButton#createButton:focus {
+    border-color: #0B3A8F;
+}
+QPushButton#continueButton:disabled, QPushButton#signInButton:disabled, QPushButton#createButton:disabled {
+    background: #C9D9F5;
+    border-color: #C9D9F5;
+    color: #FFFFFF;
+}
+
+QPushButton#signUpLink, QPushButton#loginLink {
+    background: transparent;
+    border: none;
+    color: #1F5FD1;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 4px;
+}
+QPushButton#signUpLink:hover, QPushButton#loginLink:hover {
+    color: #0F3A8A;
+}
+QPushButton#backButton {
+    background: transparent;
+    border: none;
+    color: #5B6B8C;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 6px;
+}
+QPushButton#backButton:hover {
+    color: #1F5FD1;
+}
+
+/* ---------- Role cards ---------- */
+QFrame#studentCard, QFrame#teacherCard {
+    background: #FFFFFF;
+    border: 2px solid #E3EBF8;
+    border-radius: 14px;
+}
+QFrame#studentCard:hover, QFrame#teacherCard:hover {
+    background: #F8FBFF;
+    border: 2px solid #9DBBEF;
+}
+QFrame#studentCard:focus, QFrame#teacherCard:focus {
+    border: 2px solid #6D9AE8;
+}
+QFrame#studentCard[selected="true"], QFrame#teacherCard[selected="true"] {
+    background: #F2F7FF;
+    border: 2px solid #1F5FD1;
+}
+QLabel#studentIcon, QLabel#teacherIcon {
+    background: #EAF1FD;
+    border: none;
+    border-radius: 14px;
+}
+QLabel#studentTitle, QLabel#teacherTitle {
+    color: #0F1F3D;
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent;
+    border: none;
+}
+QLabel#studentDesc, QLabel#teacherDesc {
+    color: #5B6B8C;
+    font-size: 13px;
+    background: transparent;
+    border: none;
+}
+QLabel#studentRadio, QLabel#teacherRadio {
+    background: #FFFFFF;
+    border: 2px solid #B8C7E3;
+    border-radius: 11px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+}
+QLabel#studentRadio[selected="true"], QLabel#teacherRadio[selected="true"] {
+    background: #1F5FD1;
+    border: 2px solid #1F5FD1;
+}
